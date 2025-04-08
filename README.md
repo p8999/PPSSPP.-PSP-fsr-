@@ -19,5 +19,9 @@ YouTube channel of the person:
 https://youtu.be/Py9zG8Xsb1c?si=gAPtEYyxP7d_6zS8
 I directly integrated these shaders into the emulator.
 
+Download Link
+https://www.mediafire.com/file/ektfjdl7ea0b2l1/psp.apk/file
+
+
 I hope you enjoy this emulator to the fullest 🫡
 
