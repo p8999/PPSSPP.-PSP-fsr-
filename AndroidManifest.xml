@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.PSPemulator.FSR1"
+    platformBuildVersionCode="35"
+    platformBuildVersionName="15"
+    android:installLocation="auto"
+    android:compileSdkVersion="35"
+    android:compileSdkVersionCodename="15"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:glEsVersion="0x20000" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.gamepad"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <!-- به برنامه اجازه می‌دهد محتوای فضای ذخیره‌سازی مشترکتان را بنویسد. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- به برنامه اجازه می‌دهد محتوای فضای ذخیره هم‌رسانی‌شده‌تان را بخواند. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- به برنامه امکان می‌دهد اطلاعات مربوط به اتصالات شبکه مانند شبکه‌های موجود و متصل را مشاهده کند. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- به برنامه امکان می‌دهد سوکت‌های شبکه را ایجاد کند و از پروتکل‌های شبکه سفارشی استفاده نماید. مرورگر و سایر برنامه‌ها روشی را برای ارسال داده‌ها به اینترنت ارائه می‌کنند بنابراین این مجوز برای ارسال داده به اینترنت ضروری نیست. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="com.PSPemulator.FSR1_archos.permission.FULLSCREEN.FULL" />
+    <!-- این برنامه زمانی که درحال استفاده است می‌تواند ازطریق خدمات مکان، مکان تقریبی شما را دریافت کند. برای اینکه برنامه بتواند موقعیت مکان را دریافت کند، خدمات مکان دستگاهتان باید روشن باشد. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- این برنامه زمانی که درحال استفاده است می‌تواند ازطریق خدمات مکان، مکان دقیق شما را دریافت کند. برای اینکه برنامه بتواند موقعیت مکان را دریافت کند، خدمات مکان دستگاهتان باید روشن باشد. روشن بودن خدمات مکان ممکن است مصرف باتری را افزایش دهد. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- به برنامه اجازه می‌دهد تا از فرستنده مادون قرمز تلفن استفاده کند. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.TRANSMIT_IR" />
+    <!-- این برنامه وقتی درحال استفاده است، می‌تواند بااستفاده از دوربین عکس و فیلم بگیرد. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.CAMERA" />
+    <!-- این برنامه وقتی درحال استفاده است، می‌تواند بااستفاده از میکروفون صدا ضبط کند. -->
+    <uses-permission-sdk-23
+        android:name="android.permission.RECORD_AUDIO" />
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+    <application
+        android:label="PSP emulator"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:banner="@drawable/ic_banner"
+        android:isGame="true"
+        android:extractNativeLibs="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:preserveLegacyExternalStorage="true">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <activity
+            android:theme="@style/ppsspp_style"
+            android:name="org.ppsspp.ppsspp.PpssppActivity"
+            android:exported="true"
+            android:configChanges="keyboard|keyboardHidden|locale|navigation|uiMode">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category
+                    android:name="tv.ouya.intent.category.GAME" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="file" />
+                <data
+                    android:scheme="content" />
+                <data
+                    android:mimeType="*/*" />
+                <data
+                    android:host="*" />
+                <data
+                    android:pathPattern=".*\\.iso" />
+                <data
+                    android:pathPattern=".*\\..*\\.iso" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.iso" />
+                <data
+                    android:pathPattern=".*\\.cso" />
+                <data
+                    android:pathPattern=".*\\..*\\.cso" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.cso" />
+                <data
+                    android:pathPattern=".*\\.chd" />
+                <data
+                    android:pathPattern=".*\\..*\\.chd" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.chd" />
+                <data
+                    android:pathPattern=".*\\.elf" />
+                <data
+                    android:pathPattern=".*\\..*\\.elf" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.elf" />
+                <data
+                    android:pathPattern=".*\\.ISO" />
+                <data
+                    android:pathPattern=".*\\..*\\.ISO" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.ISO" />
+                <data
+                    android:pathPattern=".*\\.CSO" />
+                <data
+                    android:pathPattern=".*\\..*\\.CSO" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.CSO" />
+                <data
+                    android:pathPattern=".*\\.ELF" />
+                <data
+                    android:pathPattern=".*\\..*\\.ELF" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.ELF" />
+                <data
+                    android:pathPattern=".*\\.CHD" />
+                <data
+                    android:pathPattern=".*\\..*\\.CHD" />
+                <data
+                    android:pathPattern=".*\\..*\\..*\\.CHD" />
+                <data
+                    android:pathPattern=".*\\.ppdmp" />
+                <data
+                    android:pathPattern=".*\\.pbp" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="isGame"
+            android:value="true" />
+        <activity
+            android:label="@string/shortcut_name"
+            android:name="org.ppsspp.ppsspp.ShortcutActivity"
+            android:exported="true">
+            <intent-filter>
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <action
+                    android:name="android.intent.action.CREATE_SHORTCUT" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="xperiaplayoptimized_content"
+            android:resource="@mipmap/ic_launcher" />
+        <profileable
+            android:enabled="true"
+            android:shell="true" />
+        <meta-data
+            android:name="com.android.dynamic.apk.fused.modules"
+            android:value="base" />
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store" />
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_STANDALONE_APK" />
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0" />
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="5" />
+    </application>
+</manifest>
