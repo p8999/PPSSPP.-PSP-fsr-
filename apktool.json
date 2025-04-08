@@ -1,0 +1,64 @@
+{
+  "apkFileName": "base_src_mod_src.apk",
+  "PackageInfo": {
+    "forcedPackageId": "127",
+    "renameManifestPackage": null
+  },
+  "doNotCompress": [
+    "resources.arsc",
+    "png",
+    "assets/asciifont_atlas.meta",
+    "assets/font_atlas.meta",
+    "assets/ppge_atlas.meta",
+    "wav",
+    "assets/ui_atlas.meta",
+    "assets/vfpu/vfpu_log2_lut65536_quadratic.dat"
+  ],
+  "compressionType": false,
+  "sparseResources": false,
+  "version": "2.4.0-250402",
+  "sharedLibrary": false,
+  "VersionInfo": {
+    "versionName": "1.18.fsr",
+    "versionCode": "118010009"
+  },
+  "UsesFramework": {
+    "ids": [1],
+    "tag": null
+  },
+  "unknownFiles": {
+    "META-INF/androidx.vectordrawable_vectordrawable.version": "0",
+    "gold/ic_launcher-playstore.png": "0",
+    "META-INF/androidx.loader_loader.version": "0",
+    "META-INF/androidx.lifecycle_lifecycle-livedata.version": "0",
+    "META-INF/androidx.lifecycle_lifecycle-runtime.version": "0",
+    "normal/ic_launcher-playstore.png": "0",
+    "META-INF/androidx.appcompat_appcompat-resources.version": "0",
+    "META-INF/androidx.lifecycle_lifecycle-livedata-core.version": "0",
+    "META-INF/androidx.appcompat_appcompat.version": "0",
+    "META-INF/androidx.viewpager_viewpager.version": "0",
+    "META-INF/androidx.cursoradapter_cursoradapter.version": "0",
+    "META-INF/androidx.lifecycle_lifecycle-viewmodel.version": "0",
+    "META-INF/androidx.core_core.version": "0",
+    "META-INF/androidx.drawerlayout_drawerlayout.version": "0",
+    "META-INF/androidx.arch.core_core-runtime.version": "0",
+    "META-INF/androidx.versionedparcelable_versionedparcelable.version": "0",
+    "META-INF/androidx.vectordrawable_vectordrawable-animated.version": "0",
+    "META-INF/version-control-info.textproto": "8",
+    "META-INF/androidx.savedstate_savedstate.version": "0",
+    "META-INF/androidx.interpolator_interpolator.version": "0",
+    "META-INF/androidx.fragment_fragment.version": "0",
+    "META-INF/androidx.activity_activity.version": "0",
+    "META-INF/androidx.customview_customview.version": "0",
+    "main/jniLibs/README.txt": "8",
+    "META-INF/androidx.documentfile_documentfile.version": "0",
+    "META-INF/com/android/build/gradle/app-metadata.properties": "8"
+  },
+  "apkFilePath": "/storage/emulated/0/Download/base_src_mod.apk",
+  "compactEntries": false,
+  "isFrameworkApk": false,
+  "sdkInfo": {
+    "minSdkVersion": "9",
+    "targetSdkVersion": "36"
+  }
+}
